@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/kit.css">
+    <style>
+      .block-fill-height {
+        height: 100vh;
+      }
+
+      .nav-link {
+        color: var(--dark);
+      }
+
+      .nav-link:hover {
+        color: inherit;
+      }
+
+      .img-icon {
+        user-drag: none;
+        -webkit-user-drag: none;
+        max-width: 20vw;
+        max-height: 20vh;
+      }
+
+      .img-icon:after {
+        content: "Test";
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #000;
+          color: var(--light);
+        }
+
+        h1 {
+          color: var(--light);
+        }
+
+        .nav-link {
+          color: var(--light);
+        }
+      }
+    </style>
+
+    <title>Matthews-Kennington</title>
+  </head>
+  <body>
+    <div class="block block-fill-height text-center">
+      <div class="block-xs-middle">
+        <div class="container-fluid">
+          <h1 data-greeting></h1>
+          <nav class="iconav">
+            <div class="iconav-slider">
+              <ul class="nav nav-pills iconav-nav flex-row justify-content-center">
+                <li class="nav-item">
+                  <a class="nav-link" href="radarr" title="Radarr">
+                    <img src="img/radarr.png" class="img-fluid img-icon" alt="Radarr">
+                    <small class="iconav-nav-label d-block">Radarr</small>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="sonarr" title="Sonarr">
+                    <img src="img/sonarr.png" class="img-fluid img-icon" alt="Sonarr">
+                    <small class="iconav-nav-label d-block">Sonarr</small>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="sabnzbd" title="SABnzbd">
+                    <img src="img/sabnzbd.png" class="img-fluid img-icon" alt="SABnzbd">
+                    <small class="iconav-nav-label d-block">SABnzbd</small>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="js/bootstrap-kit.bundle.min.js"></script>
+    <script>
+      var date = new Date();
+      var hour = date.getHours();
+      var greeting = '';
+
+      switch (hour) {
+        case 0:
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+          greeting = 'Good evening';
+        case 6:
+        case 7:
+        case 8:
+        case 9:
+        case 10:
+        case 11:
+          greeting = 'Good morning';
+        case 12:
+        case 13:
+        case 14:
+        case 15:
+        case 16:
+        case 17:
+          greeting = 'Good afternoon';
+        case 18:
+        case 19:
+        case 20:
+        case 21:
+        case 22:
+        case 23:
+          greeting = 'Good evening';
+      }
+
+      $('[data-greeting]').text(greeting);
+    </script>
+  </body>
+</html>
