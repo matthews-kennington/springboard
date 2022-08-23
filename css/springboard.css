@@ -13,6 +13,8 @@ body {
 
 .nav-link {
   color: var(--dark);
+  padding-right: .5rem;
+  padding-left: .5rem;
 }
 
 .nav-link:hover {
